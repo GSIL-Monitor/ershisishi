@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@drawable/bg_light_blue">
+    android:background="@drawable/bg_light_blue"
+    tools:context=".MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -13,6 +13,11 @@
     <TextView
         android:id="@+id/id_textview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:paddingLeft="8dp"
+        android:textSize="18sp"
+        android:paddingBottom="20dp"
+        android:textColor="#000000"
+        />
     </ScrollView>
 </RelativeLayout>

@@ -19,7 +19,10 @@
 
         <activity android:name=".BookAct" >
         </activity>
-        <activity android:name=".BookContentAct" >
+        <activity android:name=".BookContentAct"
+
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            >
         </activity>
     </application>
 

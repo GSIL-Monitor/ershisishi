@@ -74,7 +74,7 @@ public class BookAct extends AppCompatActivity {
                 public void onClick(View v) {
                     Cursor cursor = db.rawQuery("select * from table_volume where volume=?", new String[]{mBookNames.get(position)});
                         if (cursor.moveToFirst()) {
-                            Intent intent = new Intent(BookAct.this, BookContentAct.class);,,
+                            Intent intent = new Intent(BookAct.this, BookContentAct.class);
                             intent.putExtra("BookContent",cursor.getString(cursor.getColumnIndex("content")) );
                             startActivity(intent);
                     }
