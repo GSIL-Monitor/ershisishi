@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import java.io.IOException;
 import java.util.LinkedList;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     List<String> mHistoryNames = new LinkedList<>();
     List<String> mDatabaseNames = new LinkedList<>();
 
+    Button mPlayMusicBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +31,14 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView = (RecyclerView) findViewById(R.id.id_recyclerview);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mRecyclerView.setAdapter(new BookNameAdapter());
+        // service
+        mPlayMusicBtn = (Button) findViewById(R.id.id_play_btn);
+        mPlayMusicBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startService(new Intent(MainActivity.this, MusicService.class));
+            }
+        });
     }
 
 

@@ -2,6 +2,7 @@ package com.wangjiong.ershisishi;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 /**
@@ -9,11 +10,15 @@ import android.widget.TextView;
  */
 
 public class BookContentAct extends AppCompatActivity {
+    ScrollView mScrollView;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.book_content_act);
 
         TextView textView =  (TextView)findViewById(R.id.id_textview);
         textView.setText(getIntent().getStringExtra("BookContent"));
+
+        mScrollView =  (ScrollView)findViewById(R.id.id_scrollview);
+
     }
 }
