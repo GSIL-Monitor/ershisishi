@@ -20,5 +20,8 @@ public class BookContentAct extends AppCompatActivity {
 
         mScrollView =  (ScrollView)findViewById(R.id.id_scrollview);
 
+        if(MusicService.msMusicService != null){
+            MusicService.msMusicService.playMusic("music/yuefei.mp3");
+        }
     }
 }

@@ -33,6 +33,10 @@ public class BookAct extends AppCompatActivity {
         mRecyclerView = (RecyclerView) findViewById(R.id.id_recyclerview);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mRecyclerView.setAdapter(new BookNameAdapter());
+
+        if(MusicService.msMusicService != null){
+            MusicService.msMusicService.playMusic("music/sanguozhi.mp3");
+        }
     }
 
     SQLiteDatabase db;
